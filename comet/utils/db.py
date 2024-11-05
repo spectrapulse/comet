@@ -25,8 +25,8 @@ async def setup_database():
         )
     except Exception as e:
         logger.error(f"Error setting up the database: {e}")
-        os.exit(1)
-
+        os._exit(1)
+  
 async def teardown_database():
     try:
         await database.disconnect()
